@@ -1,15 +1,14 @@
 def obsah_obdelniku():
     while(True):
-        a = input("Zadej stranu a: ")
-        if(not a.isdigit()):
-            print("Neplatný vstup")
-            continue
-        b = input("Zadej stranu b: ")
-        if(not b.isdigit()):
-            print("Neplatný vstup")
-            continue
+        try:
+            a = float(input("Zadej stranu a: "))
+            b = float(input("Zadej stranu b: "))
 
-        print(int(a)*int(b))
-        break
+            print(f"Obsah je: {abs(a*b)}")
+        except:
+            print("Neplatný vstup")
+        else:
+            break
+    
         
 obsah_obdelniku()
